@@ -2,9 +2,11 @@
 @section('content')
     <h1 class="text-center">CRUD</h1>
     <div class="text-center">
-        <button class="btn btn-success mt-3 mb-4">
-            Cadastrar
-        </button>
+        <a href="{{url('books/create')}}">
+            <button class="btn btn-success mt-3 mb-4">
+                Cadastrar
+            </button>
+        </a>
     </div>
     <div class="col-8 m-auto">
         <table class="table table-dark table-hover">
@@ -29,7 +31,7 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $books->price }}</td>
                             <td>
-                                <a href="">
+                                <a href="{{url("books/$books->id")}}">
                                     <button class="btn btn-dark">
                                         visualizar
                                     </button>

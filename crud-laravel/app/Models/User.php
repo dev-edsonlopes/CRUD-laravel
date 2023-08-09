@@ -42,6 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Criando relação de 1:N
     public function relBooks() {
         return $this->hasMany(ModelBook::class, 'id_user');
     }
